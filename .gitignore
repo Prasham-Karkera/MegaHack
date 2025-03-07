@@ -1,4 +1,7 @@
 # ...existing code...
 env
-
+node_modules
+.next
+ss
+__pycache__
 # ...existing code...

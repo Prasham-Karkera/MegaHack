@@ -1,0 +1,7 @@
+langchain
+google-generative-ai
+langchain_google_genai
+fuzzywuzzy
+python-Levenshtein
+pandas
+python-dotenv
