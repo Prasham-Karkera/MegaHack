@@ -1,0 +1,304 @@
+{
+  "history": [
+    {
+      "id": "cmd-100",
+      "command": "Enable/Disable WiFi",
+      "timestamp": "2025-03-07T15:00:30Z",
+      "subCommands": [
+        {
+          "id": "cmd-100-1",
+          "command": "Open settings",
+          "timestamp": "2025-03-07T15:01:10Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-100-2",
+          "command": "Navigate to WiFi settings",
+          "timestamp": "2025-03-07T15:02:20Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-100-3",
+          "command": "Toggle WiFi state",
+          "timestamp": "2025-03-07T15:03:45Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-101",
+      "command": "Volume set to 75%",
+      "timestamp": "2025-03-07T16:15:30Z",
+      "subCommands": [
+        {
+          "id": "cmd-101-1",
+          "command": "Access volume controls",
+          "timestamp": "2025-03-07T16:16:10Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-101-2",
+          "command": "Adjust volume to 75%",
+          "timestamp": "2025-03-07T16:17:25Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-101-3",
+          "command": "Confirm volume adjustment",
+          "timestamp": "2025-03-07T16:18:50Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-102",
+      "command": "Do Not Disturb On",
+      "timestamp": "2025-03-07T17:30:20Z",
+      "subCommands": [
+        {
+          "id": "cmd-102-1",
+          "command": "Open settings",
+          "timestamp": "2025-03-07T17:31:05Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-102-2",
+          "command": "Navigate to Do Not Disturb settings",
+          "timestamp": "2025-03-07T17:32:15Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-102-3",
+          "command": "Toggle Do Not Disturb mode",
+          "timestamp": "2025-03-07T17:33:45Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-103",
+      "command": "blutoooth on",
+      "timestamp": "2025-03-08T02:17:11Z",
+      "subCommands": [
+        {
+          "id": "cmd-103-1",
+          "command": "Processing command",
+          "timestamp": "2025-03-08T02:18:11Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-103-2",
+          "command": "Executing action",
+          "timestamp": "2025-03-08T02:19:11Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-103-3",
+          "command": "Completing task",
+          "timestamp": "2025-03-08T02:20:11Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-104",
+      "command": "open settings",
+      "timestamp": "2025-03-08T02:17:59Z",
+      "subCommands": [
+        {
+          "id": "cmd-104-1",
+          "command": "Processing command",
+          "timestamp": "2025-03-08T02:18:59Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-104-2",
+          "command": "Executing action",
+          "timestamp": "2025-03-08T02:19:59Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-104-3",
+          "command": "Completing task",
+          "timestamp": "2025-03-08T02:20:59Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-105",
+      "command": "blutooth off",
+      "timestamp": "2025-03-08T02:18:29Z",
+      "subCommands": [
+        {
+          "id": "cmd-105-1",
+          "command": "Processing command",
+          "timestamp": "2025-03-08T02:19:29Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-105-2",
+          "command": "Executing action",
+          "timestamp": "2025-03-08T02:20:29Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-105-3",
+          "command": "Completing task",
+          "timestamp": "2025-03-08T02:21:29Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-106",
+      "command": "bluetooth on",
+      "timestamp": "2025-03-08T02:19:08Z",
+      "subCommands": [
+        {
+          "id": "cmd-106-1",
+          "command": "Open settings",
+          "timestamp": "2025-03-08T02:20:08Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-106-2",
+          "command": "Navigate to Bluetooth settings",
+          "timestamp": "2025-03-08T02:21:08Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-106-3",
+          "command": "Toggle Bluetooth state",
+          "timestamp": "2025-03-08T02:22:08Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-107",
+      "command": "bluetooth off",
+      "timestamp": "2025-03-08T02:19:24Z",
+      "subCommands": [
+        {
+          "id": "cmd-107-1",
+          "command": "Open settings",
+          "timestamp": "2025-03-08T02:20:24Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-107-2",
+          "command": "Navigate to Bluetooth settings",
+          "timestamp": "2025-03-08T02:21:24Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-107-3",
+          "command": "Toggle Bluetooth state",
+          "timestamp": "2025-03-08T02:22:24Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-108",
+      "command": "level up brightness to max",
+      "timestamp": "2025-03-08T02:19:41Z",
+      "subCommands": [
+        {
+          "id": "cmd-108-1",
+          "command": "Access brightness controls",
+          "timestamp": "2025-03-08T02:20:41Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-108-2",
+          "command": "Adjust brightness level",
+          "timestamp": "2025-03-08T02:21:41Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-108-3",
+          "command": "Apply changes",
+          "timestamp": "2025-03-08T02:22:41Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-109",
+      "command": "bluetooth on",
+      "timestamp": "2025-03-08T02:20:27Z",
+      "subCommands": [
+        {
+          "id": "cmd-109-1",
+          "command": "Open settings",
+          "timestamp": "2025-03-08T02:21:27Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-109-2",
+          "command": "Navigate to Bluetooth settings",
+          "timestamp": "2025-03-08T02:22:27Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-109-3",
+          "command": "Toggle Bluetooth state",
+          "timestamp": "2025-03-08T02:23:27Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-110",
+      "command": "hello",
+      "timestamp": "2025-03-08T02:47:14Z",
+      "subCommands": [
+        {
+          "id": "cmd-110-1",
+          "command": "Processing command",
+          "timestamp": "2025-03-08T02:48:14Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-110-2",
+          "command": "Executing action",
+          "timestamp": "2025-03-08T02:49:14Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-110-3",
+          "command": "Completing task",
+          "timestamp": "2025-03-08T02:50:14Z",
+          "status": "success"
+        }
+      ]
+    },
+    {
+      "id": "cmd-111",
+      "command": "call pranay mistry",
+      "timestamp": "2025-03-08T02:47:42Z",
+      "subCommands": [
+        {
+          "id": "cmd-111-1",
+          "command": "Processing command",
+          "timestamp": "2025-03-08T02:48:42Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-111-2",
+          "command": "Executing action",
+          "timestamp": "2025-03-08T02:49:42Z",
+          "status": "success"
+        },
+        {
+          "id": "cmd-111-3",
+          "command": "Completing task",
+          "timestamp": "2025-03-08T02:50:42Z",
+          "status": "success"
+        }
+      ]
+    }
+  ]
+}

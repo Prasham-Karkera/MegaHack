@@ -75,5 +75,7 @@ def operator(c):
     else:
         print("No matching tool found.")
 
+    return tool_name
+
 # c = input("Enter command: ")
 # operator(c)
