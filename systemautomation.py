@@ -11,7 +11,7 @@ from google.genai import types
 # CONFIGURATION
 #############################################
 # For a wired connection, set your device's USB serial (as seen in "adb devices")
-DEVICE_SERIAL = "YOUR_DEVICE_SERIAL"   # e.g., "ZY2245X9LQ" – update with your device's USB serial
+DEVICE_SERIAL = "ADD YOUR DEVICE NAME"   # e.g., "ZY2245X9LQ" – update with your device's USB serial
 GEMINI_API_KEY = "AIzaSyARz4paB2iL3hdRj6jHSMHHFBo6_Xj2MxA"   # Replace with your actual Gemini API key
 EXECUTION_LOG = "executed_commands.json"  # Log file to track executed commands
 
@@ -156,18 +156,19 @@ def generate_command(user_input, screenshot_path=None):
     """
     width, height = get_screen_resolution()
     contents = [
-        types.Content(role="user", parts=[types.Part.from_text(text="hey")]),
-        types.Content(role="model", parts=[types.Part.from_text(text="Okay, I'm ready to help. What's your task?")]),
-        types.Content(role="user", parts=[types.Part.from_text(text=user_input)])
+        types.Content(role="user", content="hey"),
+        types.Content(role="model", content="Okay, I'm ready to help. What's your task?"),
+        types.Content(role="user", content=user_input)
     ]
     if screenshot_path:
-        contents.append(types.Content(role="user", parts=[types.Part.from_text(text=f"Screenshot path: {screenshot_path}")]))
+        contents.append(types.Content(role="user", content=f"Screenshot path: {screenshot_path}"))
     
     system_instr = (
-        "You are an AI assistant that controls an Android device via ADB. "
+               "You are an AI assistant that controls an Android device via ADB. "
         "The user provides natural language system instructions for various tasks, including adjusting brightness, volume, toggling Wi-Fi/mobile data, launching apps, taking photos, and performing Google searches. "
         "Output only the exact ADB shell command for the next required step, with no extra text or explanation. "
         "Valid commands include:\n"
+    
         "  - 'adb shell am start -n <package>/<activity>' to launch an app,\n"
         "  - 'adb shell input tap x y' to simulate a tap,\n"
         "  - 'adb shell input swipe x1 y1 x2 y2 [duration]' for swiping,\n"
@@ -175,14 +176,8 @@ def generate_command(user_input, screenshot_path=None):
         "  - 'adb shell svc wifi disable/enable' for Wi-Fi toggling,\n"
         "  - 'adb shell media volume --show --stream 3 --set <value>' for volume,\n"
         "  - 'adb shell settings put system screen_brightness <value>' for brightness,\n"
-        "  - For Google search, use: adb shell am start -a android.intent.action.VIEW -d \"https://www.google.com/search?q=<query>\"\n\n"
-        "For camera tasks, if the instruction is to take a photo or capture a photo, follow this flow:\n"
-        "  1. Output the command to open the camera using: adb shell am start -a android.media.action.IMAGE_CAPTURE\n"
-        "  2. Then, in a loop, capture a fresh screenshot and instruct: 'The camera is open. Now tap the shutter button to take the photo.'\n"
-        "  3. Loop until a valid shutter tap command (e.g., 'adb shell input tap x y') is generated and executed successfully.\n\n"
-        "If the screenshot indicates that a step is already complete, output only the command for the next step. "
-        "If a fresh screenshot is needed, output 'ss'. If the entire task is complete, output 'end'.\n\n"
-        f"The device screen resolution is {width} x {height}. Temperature is set to 2. "
+        "  - For Google search, use: adb shell am start -a android.intent.action.VIEW -d \"https://www.google.com/search?q={query.replace(' ', '%20')}\"\n\n"
+        "The device screen resolution is 1080 x 2340. Temperature is set to 2. "
         "Think carefully and output only the exact ADB command for the next required step."
     )
     
@@ -192,7 +187,7 @@ def generate_command(user_input, screenshot_path=None):
         top_k=40,
         max_output_tokens=256,
         response_mime_type="text/plain",
-        system_instruction=[types.Part.from_text(text=system_instr)]
+        system_instruction=[types.Part(text=system_instr)]
     )
     
     client = genai.Client(api_key=GEMINI_API_KEY)
