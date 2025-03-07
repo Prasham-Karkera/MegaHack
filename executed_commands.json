@@ -1,0 +1,16 @@
+{
+    "Okay, I have a screenshot. What would you like me to do?": "failed",
+    "Okay, I see a screen with a Google search bar. What is the next step you'd like me to take? Please describe it in natural language.": "failed",
+    "adb shell input swipe 540 0 540 800": "success",
+    "I need to see the screen to understand the current state and determine the next action.\n\nss": "failed",
+    "svc wifi disable": "failed",
+    "adb shell svc wifi disable": "success",
+    "I need to know the current state of the device to set the volume. Can you provide a screenshot of the device screen?": "failed",
+    "adb shell svc wifi enable": "success",
+    "adb shell media volume --show --stream 3 --set 10": "success",
+    "adb shell media volume --show --stream 3 --set 7": "success",
+    "adb shell settings put system screen_brightness 178": "success",
+    "adb shell settings put system screen_brightness 127": "success",
+    "adb shell settings put system screen_brightness 25": "success",
+    "ss": "failed"
+}
