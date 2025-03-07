@@ -52,7 +52,7 @@ def search_contacts(query, contacts_df):
 
 
 def get_phone_by_name(name):
-    contacts_df = load_contacts('./contacts2.csv')
+    contacts_df = load_contacts('./contacts.csv')
     results = search_contacts(name, contacts_df)
     if results:
         return results[0][0]['phone']
@@ -61,12 +61,14 @@ def get_phone_by_name(name):
 
 
 def main():
-    filepath = './contacts2.csv'
+    filepath = './contacts.csv'
     contacts_df = load_contacts(filepath)
     # print(contacts_df)
     query = input("Enter contact name to search: ")
+    # print("Hello")
 
     results = search_contacts(query, contacts_df)
+    # print(results)
     for contact, score in results:
         print(
             f"Name: {contact['name']}, Phone: {contact['phone']}, Score: {score}")
@@ -74,4 +76,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # get_phone_by_name("Prasham")
+    get_phone_by_name("Prasham")
