@@ -38,6 +38,7 @@ def operator(c):
     9. take_picture(dummy_input)  # new tool for taking a picture
 
     Analyze the given command and output the tool name and its required arguments as a JSON object.
+    If google is there map it to system controls
     If arguments are required, give them in 'arguments': 'argument1': 'value1'
     If no argurments are required, give an empty object .
     Now analyze this command:

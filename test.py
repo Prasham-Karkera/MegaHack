@@ -12,6 +12,9 @@
 
 # print(response.text)
 
-from tools import take_picture
+from systemautom import process_instruction
 
-take_picture("Hello")
+# Example usage
+if __name__ == "__main__":
+    instruction = input("Enter your instruction: ")
+    process_instruction(instruction)

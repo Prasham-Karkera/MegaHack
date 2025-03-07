@@ -5,6 +5,7 @@ from fuzzy import get_phone_by_name
 from whatsapp import send_whatsapp_messages, audio_call_whatsapp, video_call_whatsapp
 from calling import call_number
 from camera import take_pic
+from systemautom import process_instruction
 
 @tool
 def send_whatsapp_message(recipient: str, message: str) -> str:
@@ -70,6 +71,7 @@ def system_controls(command: str) -> str:
     '''Function to simulate performing a system control action.'''
     print(f"Tool: system_controls received command: {command}")
     # Simulate processing the system control command (e.g., shutdown, restart, etc.)
+    process_instruction(command)
     return f"[Dummy] System control executed: {command}"
 
 
