@@ -1,24 +1,25 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from pyngrok import ngrok, conf
-from last_tools import operator
+
 import uuid
 import datetime
 import json
 import os
+from sos import send_sos_alert
+from divider import execute_commands
+
 
 app = Flask(__name__)
 CORS(app)
 
-# Define path for command history
 HISTORY_FILE = os.path.join(os.path.dirname(__file__), 'command_history.json')
 
-# Initialize command history
+
 command_history = {
     "history": []
 }
 
-# Load existing history if available
 if os.path.exists(HISTORY_FILE):
     try:
         with open(HISTORY_FILE, 'r') as f:
@@ -35,39 +36,39 @@ metrics_data = {
     "Applications Memory Usage (in Kilobytes)": {
       "Total RSS by process": "Data Not Provided"
     },
-    "Uptime": 401146364,
-    "Realtime": 702240092
+    "Uptime": 30576477,
+    "Realtime": 30932048
   },
   "CPU Metrics": {
     "Load": [
-      29.04,
-      20.73,
-      18.31
+      15.12,
+      15.07,
+      15.44
     ],
     "CPU Usage": {
-      "From": "2025-03-06 22:57:09.016",
-      "To": "2025-03-06 23:00:06.832",
+      "From": "2025-03-08 11:51:30.025",
+      "To": "2025-03-08 11:51:49.474",
       "Details": {
-        "Time Range": "182s",
+        "Time Range": "20s",
         "Processes": {
-          "1309/system_server": {
-            "User": "18%",
-            "Kernel": "13%",
+          "1564/system_server": {
+            "User": "10%",
+            "Kernel": "12%",
             "Faults": {
-              "Minor": 213941,
-              "Major": 18175
+              "Minor": 2207,
+              "Major": 2080
             }
           },
-          "146/kswapd0": {
-            "User": "0%",
-            "Kernel": "18%"
+          "1218/android.hardware.sensors@2.0-service.multihal": {
+            "User": "0.3%",
+            "Kernel": "2.8%"
           },
-          "19703/android.process.acore": {
-            "User": "4.3%",
-            "Kernel": "3.9%",
+          "2594/com.google.android.gms.persistent": {
+            "User": "2.1%",
+            "Kernel": "0.9%",
             "Faults": {
-              "Minor": 41626,
-              "Major": 5599
+              "Minor": 3056,
+              "Major": 93
             }
           }
         }
@@ -76,17 +77,17 @@ metrics_data = {
   },
   "GPU Metrics": {
     "Applications Graphics Acceleration Info": {},
-    "Uptime": 401150919,
-    "Realtime": 702244648,
+    "Uptime": 30578557,
+    "Realtime": 30934129,
     "Graphics Info": {
-      "PID": 2369,
+      "PID": 2833,
       "App": "com.sec.android.app.launcher"
     }
   },
   "Battery Metrics": {
     "Current Battery Service State": {
-      "AC Powered": True,
-      "USB Powered": False,
+      "AC Powered": False,
+      "USB Powered": True,
       "Wireless Powered": False,
       "Dock Powered": False
     }
@@ -107,11 +108,32 @@ def execute_command():
     print(f"Received command: {command} at {timestamp}")
 
     try:
-        # Execute operator and return only the tool name
-        tool_used = operator(command)
-        return jsonify({"tool_name": tool_used})
+        
+        result = execute_commands(command)
+        command_history["history"].append({
+            "command": command,
+            "timestamp": timestamp,
+            "result": result
+        })
+        save_history()
+        return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": str(e)})
+  
+@app.route('/metrics', methods=['GET'])
+def get_metrics():
+    return jsonify(metrics_data)
+
+@app.route('/sos', methods=['GET'])
+def sos():
+    sos_data = send_sos_alert()
+    return jsonify(sos_data)
+
+@app.route('/zerodha', methods=['GET'])
+def zerodha():
+    from fullZerodha import run_zerodha  
+    recommendations = run_zerodha()
+    return jsonify({"recommendations": recommendations})
 
 if __name__ == '__main__':
     conf.get_default().auth_token = "2tzQ6lHmAbxJyh2XXRhl0MfjFdU_32a41sN7MCKJxKzsr1cVn"

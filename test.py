@@ -12,9 +12,6 @@
 
 # print(response.text)
 
-from systemautom import process_instruction
+from tools import add_calendar_event
 
-# Example usage
-if __name__ == "__main__":
-    instruction = input("Enter your instruction: ")
-    process_instruction(instruction)
+add_calendar_event("Schdule a meeting with SIH Team Mates on 15 Marsh 2025")

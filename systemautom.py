@@ -2,7 +2,7 @@ import os
 from google import genai
 from google.genai import types
 
-GEMINI_API_KEY = "AIzaSyARz4paB2iL3hdRj6jHSMHHFBo6_Xj2MxA"  # Replace with your Gemini API key
+GEMINI_API_KEY = "AIzaSyARz4paB2iL3hdRj6jHSMHHFBo6_Xj2MxA"  
 
 system_prompt = """
 You are an AI assistant that controls an Android device via ADB. 
@@ -23,7 +23,6 @@ Think carefully and output only the exact ADB command for the next required step
 """
 
 def process_instruction(instruction):
-    # Build the request for Gemini
     contents = [
         types.Content(role="user", parts=[types.Part.from_text(text=instruction)])
     ]
@@ -35,22 +34,15 @@ def process_instruction(instruction):
         system_instruction=system_prompt
     )
 
-    # Call Gemini to generate the ADB command
     client = genai.Client(api_key=GEMINI_API_KEY)
     model = "gemini-2.0-flash"
     response = client.models.generate_content(model=model, contents=contents, config=config)
     response_text = response.text
 
-    # Assume the LLM output is exactly the command needed
     adb_command = response_text.strip()
     print("Generated ADB command:")
     print(adb_command)
 
-    # Correct the volume command if necessary
-    # if "media volume" in adb_command:
-    #     adb_command = adb_command.replace("media volume", "media volume --stream 3 --set")
-
-    # Execute the generated ADB command
     print("Executing command...")
     ret = os.system(adb_command)
     if ret == 0:
@@ -58,7 +50,6 @@ def process_instruction(instruction):
     else:
         print("Command execution failed.")
 
-# Example usage
 if __name__ == "__main__":
     instruction = input("Enter your instruction: ")
     process_instruction(instruction)

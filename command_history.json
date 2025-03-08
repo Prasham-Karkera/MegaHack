@@ -299,6 +299,186 @@
           "status": "success"
         }
       ]
+    },
+    {
+      "command": "turn wifi off and bluetooth on",
+      "timestamp": "2025-03-08T09:47:20Z",
+      "result": null
+    },
+    {
+      "command": "wifi and bluetooth both off and call prasham afterwards",
+      "timestamp": "2025-03-08T09:48:30Z",
+      "result": null
+    },
+    {
+      "command": "send pranay mistry message \"hello\" then message prasham message \"yellow\" on whatsapp",
+      "timestamp": "2025-03-08T09:51:06Z",
+      "result": null
+    },
+    {
+      "command": "ssend message to prasham \"hello\" and then again \"hello1\" on whatsapp",
+      "timestamp": "2025-03-08T09:55:47Z",
+      "result": null
+    },
+    {
+      "command": "send \"hello\" to prasham on whatsapp and then audio call prasham on whatsapp",
+      "timestamp": "2025-03-08T09:58:31Z",
+      "result": null
+    },
+    {
+      "command": "Send message to Prasham hello",
+      "timestamp": "2025-03-08T09:59:24Z",
+      "result": null
+    },
+    {
+      "command": "Send message on whatsapp to Prasham hello and call him",
+      "timestamp": "2025-03-08T10:00:19Z",
+      "result": null
+    },
+    {
+      "command": "schedule a meeting with varshil on 23rd march 2025 at 5:30pm",
+      "timestamp": "2025-03-08T10:15:35Z",
+      "result": null
+    },
+    {
+      "command": "search b99 on google chrome",
+      "timestamp": "2025-03-08T10:18:49Z",
+      "result": null
+    },
+    {
+      "command": "take a picture",
+      "timestamp": "2025-03-08T10:31:58Z",
+      "result": null
+    },
+    {
+      "command": "take a picture",
+      "timestamp": "2025-03-08T10:33:37Z",
+      "result": null
+    },
+    {
+      "command": "send sms to varshil hello",
+      "timestamp": "2025-03-08T10:37:25Z",
+      "result": null
+    },
+    {
+      "command": "send a message varshil hello on whatsapp and an sms to varshil saying hello",
+      "timestamp": "2025-03-08T10:39:10Z",
+      "result": null
+    },
+    {
+      "command": "call prasham",
+      "timestamp": "2025-03-08T10:43:42Z",
+      "result": null
+    },
+    {
+      "command": "take a picture",
+      "timestamp": "2025-03-08T10:44:02Z",
+      "result": null
+    },
+    {
+      "command": "send sms to varshil hello",
+      "timestamp": "2025-03-08T10:44:22Z",
+      "result": null
+    },
+    {
+      "command": "search formula 1 top 10 tracks and also video call prasham on whatsapp",
+      "timestamp": "2025-03-08T11:05:36Z",
+      "result": null
+    },
+    {
+      "command": "take a picture",
+      "timestamp": "2025-03-08T11:13:40Z",
+      "result": null
+    },
+    {
+      "command": "search prasham on google and video call pranay mistry on whatsapp",
+      "timestamp": "2025-03-08T11:14:38Z",
+      "result": null
+    },
+    {
+      "command": "call prasham",
+      "timestamp": "2025-03-08T11:18:00Z",
+      "result": null
+    },
+    {
+      "command": "disable bluetooth and video call prasham",
+      "timestamp": "2025-03-08T11:19:02Z",
+      "result": null
+    },
+    {
+      "command": "enable bluetooth and set brightness to max and schedule a meeting with varshil on 25th march 2025 at 5:30",
+      "timestamp": "2025-03-08T11:20:17Z",
+      "result": null
+    },
+    {
+      "command": "call prasham",
+      "timestamp": "2025-03-08T11:44:09Z",
+      "result": null
+    },
+    {
+      "command": "set the brightness to max",
+      "timestamp": "2025-03-08T12:03:59Z",
+      "result": null
+    },
+    {
+      "command": "disable bluetooth and video call prasham",
+      "timestamp": "2025-03-08T12:04:26Z",
+      "result": null
+    },
+    {
+      "command": "enable bluetooth and set brightness to min and schedule a meeting with varshil on 25th march 2025 at 5:30",
+      "timestamp": "2025-03-08T12:06:24Z",
+      "result": null
+    },
+    {
+      "command": "send a message Panchal hello world",
+      "timestamp": "2025-03-08T12:08:26Z",
+      "result": null
+    },
+    {
+      "command": "enable bluetooth and set brightness to min and schedule a meeting with varshil on 25th march 2025 at 5:30",
+      "timestamp": "2025-03-08T12:14:31Z",
+      "result": null
+    },
+    {
+      "command": "enable bluetooth and set brightness to min and schedule a meeting with varshil on 25th march 2025 at 5:30",
+      "timestamp": "2025-03-08T12:15:16Z",
+      "result": null
+    },
+    {
+      "command": "VIDEO CALL RISHI PANCHAL ON WHATSAPP",
+      "timestamp": "2025-03-08T12:20:26Z",
+      "result": null
+    },
+    {
+      "command": "call RISHI PANCHAL on WhatsApp",
+      "timestamp": "2025-03-08T12:20:59Z",
+      "result": null
+    },
+    {
+      "command": "CALL Rishi Panchal",
+      "timestamp": "2025-03-08T12:27:11Z",
+      "result": null
+    },
+    {
+      "command": "call prasham dj on whatsapp",
+      "timestamp": "2025-03-08T22:27:28Z",
+      "result": null
+    },
+    {
+      "command": "schedule a meet with my sih team on 24th march 2025 at 3.30pm and video call mama on whatsapp",
+      "timestamp": "2025-03-08T22:29:13Z",
+      "result": null
+    },
+    {
+      "command": "schedule a meet with my sih team on 24th march 2025 at 3.30pm and search nearby restaruants",
+      "timestamp": "2025-03-08T22:30:45Z",
+      "result": null
+    },
+    {
+      "command": "schedule a meet with my sih team on 24th march 2025 at 3.30pm and search nearby restaruants and turn off my bluetooth and sms abhinav hello there",
+      "timestamp": "2025-03-08T22:32:29Z",
+      "result": null
     }
   ]
 }
