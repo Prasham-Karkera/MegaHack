@@ -1,0 +1,61 @@
+{
+    "RAM Metrics": {
+      "Applications Memory Usage (in Kilobytes)": {},
+      "Uptime": 336949303,
+      "Realtime": 608776120
+    },
+    "CPU Metrics": {
+      "Load": [17.51, 17.19, 18.17],
+      "CPU Usage": {
+        "From": "2025-03-05 21:00:08.152",
+        "To": "2025-03-05 21:02:19.644",
+        "Details": {
+          "Time Range": "200s",
+          "Processes": {
+            "1309/system_server": {
+              "User": "11%",
+              "Kernel": "9.4%",
+              "Faults": {
+                "Minor": 81473,
+                "Major": 3934
+              }
+            },
+            "1295/surfaceflinger": {
+              "User": "8.4%",
+              "Kernel": "7.4%",
+              "Faults": {
+                "Minor": 5420,
+                "Major": 103
+              }
+            },
+            "9951/samsung.hardware.media.c201.-0-service": {
+              "User": "9.6%",
+              "Kernel": "5.9%",
+              "Faults": {
+                "Minor": 9404,
+                "Major": 59
+              }
+            }
+          }
+        }
+      }
+    },
+    "GPU Metrics": {
+      "Applications Graphics Acceleration Info": {},
+      "Uptime": 336951589,
+      "Realtime": 608778046,
+      "Graphics Info": {
+        "PID": 2369,
+        "App": "com.sec.android.app.launcher"
+      }
+    },
+    "Battery Metrics": {
+      "Current Battery Service State": {
+        "AC Powered": false,
+        "USB Powered": false,
+        "Wireless Powered": false,
+        "Dock Powered": false
+      }
+    }
+  }
+  
