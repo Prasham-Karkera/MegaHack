@@ -1,0 +1,24 @@
+{
+    "user_id": "12345",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "history": [
+      {
+        "command": "Search for best laptops under $1000",
+        "timestamp": "2025-03-06T10:15:30Z"
+      },
+      {
+        "command": "Find nearest coffee shops",
+        "timestamp": "2025-03-06T11:00:45Z"
+      },
+      {
+        "command": "Weather forecast for New York",
+        "timestamp": "2025-03-06T11:45:10Z"
+      },
+      {
+        "command": "Latest news on AI advancements",
+        "timestamp": "2025-03-06T12:30:20Z"
+      }
+    ]
+  }
+  
