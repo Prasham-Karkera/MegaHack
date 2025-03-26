@@ -12,8 +12,8 @@ screenshot_name = f"screen_{timestamp}.png"
 screenshot_path = os.path.join(ss_folder, screenshot_name)
 
 # Device IP address and port
-device_ip = "192.168.0.139"
-device_port = "5555"
+device_ip = "10.120.113.201"
+device_port = "43355"
 
 # Enable TCP/IP on the device
 os.system(f"adb tcpip {device_port}")
@@ -22,7 +22,7 @@ os.system(f"adb tcpip {device_port}")
 os.system(f"adb connect {device_ip}:{device_port}")
 
 # ADB commands
-adb_command = 'adb shell input tap 797 2142' 
+adb_command = 'adb shell am start -a android.intent.action.VIEW -d "https://wa.me/9082651125?text=Hello%20World"' 
 adb_screencap = "adb shell screencap -p /sdcard/screen.png"
 adb_pull = f"adb pull /sdcard/screen.png {screenshot_path}"
 adb_remove = "adb shell rm /sdcard/screen.png"

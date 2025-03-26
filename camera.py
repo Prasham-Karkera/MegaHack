@@ -2,7 +2,7 @@ import os
 import datetime
 import time
 
-def take_picture():
+def take_pic():
     # Create the 'ss' folder if it doesn't exist
     ss_folder = "ss"
     os.makedirs(ss_folder, exist_ok=True)
