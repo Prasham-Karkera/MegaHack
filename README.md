@@ -1,7 +1,6 @@
 # Phantom Link
 
 🚀 **Watch the Demo on YouTube**: [Phantom Link - AI-Powered Android Automation](https://www.youtube.com/watch?v=Trm6EHTdGEo)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Trm6EHTdGEo" title="Phantom Link DEmo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 📌 Project Overview
 Phantom Link is an autonomous AI agent that revolutionizes Android device management using advanced ADB command execution and intelligent multi-task processing. It features a dual-layer architecture that enhances command routing, execution, and user engagement.
